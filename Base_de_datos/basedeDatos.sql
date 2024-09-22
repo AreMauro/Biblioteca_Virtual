@@ -1,0 +1,7 @@
+CREATE ROLE Bibliotecario  PASSWORD 'PUPE&wolf45' VALID UNTIL '2030-12-31' LOGIN SUPERUSER; 
+
+CREATE TABLESPACE dbspace OWNER Bibliotecario LOCATION 'C:\Biblioteca';
+
+CREATE DATABASE Biblioteca OWNER Bibliotecario ENCODING 'utf8' TABLESPACE 'dbspace';
+
+GRANT ALL PRIVILEGES ON DATABASE Biblioteca TO Bibliotecario;
