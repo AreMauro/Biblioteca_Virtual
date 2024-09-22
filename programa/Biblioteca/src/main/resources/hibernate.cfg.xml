@@ -1,0 +1,25 @@
+<hibernate-configuration>
+    <session-factory>
+        
+        <!-- Configuración de la conexión a la base de datos -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5433/biblioteca</property>
+        <property name="hibernate.connection.username">bibliotecario</property>
+        <property name="hibernate.connection.password">PUPE&amp;wolf45</property>
+
+        <!-- Dialecto de Hibernate para PostgreSQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- Configuración opcional -->
+        <property name="hibernate.show_sql">true</property>  <!-- Muestra las consultas SQL en la consola -->
+        <property name="hibernate.format_sql">true</property> <!-- Formatea las consultas SQL en la consola -->
+        <property name="hibernate.hbm2ddl.auto">update</property>  <!-- update | create | create-drop | validate -->
+        
+        <!-- Cache de segundo nivel (opcional) -->
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+
+        <!-- Clase de entidad mapeada -->
+        <mapping class="clasesPrincipales.Archivo"/>
+
+    </session-factory>
+</hibernate-configuration>
